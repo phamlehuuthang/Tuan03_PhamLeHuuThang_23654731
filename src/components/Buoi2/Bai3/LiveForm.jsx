@@ -13,13 +13,13 @@ export default function LiveForm(){
                 type="text"
                 placeholder="Nhập tên..."
                 value={name}
-                onChange={(name2) => setName(name2.target.value)} 
+                onChange={(nameNew) => setName(nameNew.target.value)} 
             />
             <input 
                 type="email"
                 placeholder="Nhập email..."
                 value={email}
-                onChange={(email2) => setEmail(email2.target.value)} 
+                onChange={(emailNew) => setEmail(emailNew.target.value)} 
             />
             <div className="live-output">
                 <h3>Giá trị nhập</h3>

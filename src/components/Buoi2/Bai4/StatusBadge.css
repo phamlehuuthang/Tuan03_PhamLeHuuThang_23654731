@@ -1,0 +1,39 @@
+.badge {
+    display: inline-block; /*Giữ kích thước theo nội dung nhưng vẫn set được padding/margin*/
+    padding: 10px 10px; /*Padding  trên-dưới   trái-phải ở bên trong*/
+    border-radius: 25px; /*Bo tròn góc*/
+    color: white; /*Màu chữ*/
+    font-weight: bold; /*Chữ đậm*/
+    font-family: Arial, sans-serif; /*Font chữ*/
+    margin-bottom: 15px; /*Khoảng cách bên dưới*/
+    transition: 0.5s; /*Hiệu ứng chuyển đổi mượt mà*/
+    width: 100px;
+    height: 30px;
+    line-height: 30px; /*Căn giữa chữ theo chiều dọc*/
+}
+
+.badge.online {
+    background-color: #28a745; /*Màu nền xanh lá*/
+}
+
+.badge.offline {
+    background-color: #6c757d; /*Màu nền xám*/
+}
+
+.badge.busy {
+    background-color: #dc3545; /*Màu nền đỏ*/
+}
+
+.controls button {
+    margin: 5px; /*Khoảng cách giữa các nút*/
+    padding: 10px 15px; /*Padding bên trong nút*/
+    width: 80px;
+    border-radius: 10px; /*Bo tròn góc nút*/
+    cursor: pointer; /*Con trỏ chuột dạng pointer khi hover*/
+}
+
+.controls button:hover {
+    opacity: 0.8; /*Hiệu ứng mờ khi hover*/
+    font-size: 16px;
+    color: aqua;
+}

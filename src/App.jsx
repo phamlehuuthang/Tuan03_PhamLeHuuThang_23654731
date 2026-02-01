@@ -5,9 +5,10 @@ import StudentInfo from './components/Buoi2/Bai1/StudentInfo'
 import Footer from './components/Buoi2/Bai1/Footer'
 import ButtonCounter from './components/Buoi2/Bai2/ButtonCounter'
 import LiveForm from './components/Buoi2/Bai3/LiveForm'
+import StatusBadge from './components/Buoi2/Bai4/StatusBadge'
+import TodoApp from './components/Buoi2/Bai5/TodoApp'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   const student = {
     name: "Phạm Lê Hữu Thắng",
@@ -33,6 +34,10 @@ function App() {
         return <ButtonCounter />;
       case "liveForm":
         return <LiveForm />;
+      case "statusBadge":
+         return <StatusBadge status = "online" />;
+      case "todoApp":
+          return <TodoApp/>;
       default:
         return <StudentInfo 
                   name={student.name}
@@ -56,13 +61,15 @@ function App() {
           lop={student.lop}
         />
       <Footer /> */}
-      <div s>
+      <div className="top-container">
         <h1>Bài tập tuần 3</h1>
 
         <div className="button-row" style={{ marginBottom: "20px" }}>
           <button onClick={() => setPage("studentInfo")}>Bài 1</button>
           <button onClick={() => setPage("buttonCounter")}>Bài 2</button>
           <button onClick={() => setPage("liveForm")}>Bài 3</button>
+          <button onClick={() => setPage("statusBadge")}>Bài 4</button>
+          <button onClick={() => setPage("todoApp")}>Bài 5</button>
         </div>
 
       {renderPage()}
