@@ -1,0 +1,26 @@
+.container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.live-output{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    font-size: 1.2em;
+    color: #333;
+    text-align: left;
+    border-radius: 10px;
+}

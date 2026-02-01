@@ -1,11 +1,10 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './components/Buoi2/Bai1/Header'
 import StudentInfo from './components/Buoi2/Bai1/StudentInfo'
 import Footer from './components/Buoi2/Bai1/Footer'
 import ButtonCounter from './components/Buoi2/Bai2/ButtonCounter'
+import LiveForm from './components/Buoi2/Bai3/LiveForm'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,19 +17,56 @@ function App() {
     lop: "DHKTPM19ATT"
   };
 
+  const [page, setPage] = useState("studentInfo");
+
+  const renderPage = () => {
+    switch(page) {
+      case "studentInfo":
+        return <StudentInfo 
+                  name={student.name}
+                  mssv={student.mssv}
+                  age={student.age}
+                  chuyenNganh={student.chuyenNganh}
+                  lop={student.lop}
+               />;
+      case "buttonCounter":
+        return <ButtonCounter />;
+      case "liveForm":
+        return <LiveForm />;
+      default:
+        return <StudentInfo 
+                  name={student.name}
+                  mssv={student.mssv}
+                  age={student.age}
+                  chuyenNganh={student.chuyenNganh}
+                  lop={student.lop}
+               />;
+    } 
+  }
+
   return (
     <>
       {/* Bài 1 Buổi 2
       <Header />
-      <StudentInfo 
-        name={student.name}
-        mssv={student.mssv}
-        age={student.age}
-        chuyenNganh={student.chuyenNganh}
-        lop={student.lop}
-      />
+        <StudentInfo 
+          name={student.name}
+          mssv={student.mssv}
+          age={student.age}
+          chuyenNganh={student.chuyenNganh}
+          lop={student.lop}
+        />
       <Footer /> */}
-      <ButtonCounter />
+      <div s>
+        <h1>Bài tập tuần 3</h1>
+
+        <div className="button-row" style={{ marginBottom: "20px" }}>
+          <button onClick={() => setPage("studentInfo")}>Bài 1</button>
+          <button onClick={() => setPage("buttonCounter")}>Bài 2</button>
+          <button onClick={() => setPage("liveForm")}>Bài 3</button>
+        </div>
+
+      {renderPage()}
+      </div>
     </>
   )
 }
